@@ -1,0 +1,105 @@
+/* ================================================================================================
+// 	File Name: style.scss
+// 	Description: Style for customization.
+// 	----------------------------------------------------------------------------------------------
+// 	Item Name: Chameleon Admin - Modern Bootstrap 4 WebApp & Dashboard HTML Template + UI Kit
+// 	Version: 1.0
+// 	Author: ThemeSelection
+// 	Author URL: https://themeselection.com/
+// ================================================================================================
+
+NOTE:
+------
+PLACE HERE YOUR OWN SCSS CODES AND IF NEEDED, OVERRIDE THE STYLES FROM THE OTHER STYLESHEETS.
+WE WILL RELEASE FUTURE UPDATES SO IN ORDER TO NOT OVERWRITE YOUR STYLES IT'S BETTER LIKE THIS.  */
+.navbar-header .navbar-brand .brand-logo {
+    width: 100%;
+}
+.login-logo {
+    width: 70%;
+}
+.ad_heading {
+    /* background: #e2e2e2; */
+    padding: 9px 0px;
+    margin-bottom: 20px;
+    color: #264360;
+    font-size: 20px;
+}
+.ad_heading {
+    /* background: #e2e2e2; */
+    padding: 9px 0px;
+    margin-bottom: 20px;
+    color: #264360;
+    font-size: 20px;
+}
+.box {
+  /* background: #f9f9f9; */
+  padding: 0px;
+  overflow: hidden;
+  position: relative;
+}
+
+.title {
+  padding-bottom: 20px;
+  border-color: #fa626b;
+  line-height: 30px;
+  position: relative;
+  overflow: hidden;
+  color: #fa626b;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.title:after {
+  content: "";
+  display: inline-block;
+  border-top: 1px dashed;
+  border-color: #fa626b;
+  vertical-align: middle;
+  width: 100%;
+}
+.title:after {
+  margin-right: -50%;
+  margin-left: 20px;
+}
+
+.main-menu.menu-light .navigation>li>a img {
+    line-height: 40px;
+    display: inline-block;
+    width: 40px;
+    padding: 6px;
+    height: 40px;
+    margin-right: 20px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 12%;
+    background: #fff;
+    -webkit-box-shadow: 0 0 10px rgb(0 0 0 / 12%);
+    box-shadow: 0 0 10px rgb(0 0 0 / 12%);
+}
+
+body.vertical-layout.vertical-menu.menu-expanded .main-menu {
+    width: 310px;
+}
+body.vertical-layout.vertical-menu.menu-expanded .content, body.vertical-layout.vertical-menu.menu-expanded .footer, body.vertical-layout.vertical-menu.menu-expanded .navbar .navbar-container {
+    margin-left: 310px;
+}
+
+
+
+.main-menu.menu-light .navigation>li ul li>a {
+    padding: 10px 32px 10px 82px;
+}
+.main-menu.menu-light .navigation>li ul .open>ul li>a {
+    padding: 10px 18px 10px 90px;
+}
+tr.odd img {
+    height: auto;
+}
+
+
+
+
+
+
+

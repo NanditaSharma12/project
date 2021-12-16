@@ -1,0 +1,65 @@
+RewriteEngine On
+
+
+
+RewriteRule career-details/job/(.*)/ career-details.php?job=$1
+RewriteRule career-details/job/(.*) career-details.php?job=$1
+RewriteRule blog/(.*)/ blog-details.php?title=$1
+RewriteRule blog/(.*) blog-details.php?title=$1
+
+RewriteRule category/cat/(.*)/ category.php?cat=$1
+RewriteRule category/cat/(.*) category.php?cat=$1
+RewriteRule month/date/(.*) month.php?date=$1
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+
+ # Images
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+
+  # Video
+  ExpiresByType video/webm "access plus 1 year"
+  ExpiresByType video/mp4 "access plus 1 year"
+  ExpiresByType video/mpeg "access plus 1 year"
+
+  # Fonts
+  ExpiresByType font/ttf "access plus 1 year"
+  ExpiresByType font/otf "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType application/font-woff "access plus 1 year"
+
+  # CSS, JavaScript
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType text/javascript "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+
+  # Others
+  ExpiresByType application/pdf "access plus 1 year"
+  ExpiresByType image/vnd.microsoft.icon "access plus 1 year"
+</IfModule>
+
+
+RewriteRule ^who-we-are$ /who-we-are.php [L]
+RewriteRule ^portfolio$ /portfolio.php [L]
+RewriteRule ^career$ /career.php [L]
+RewriteRule ^blog$ /blog.php [L]
+RewriteRule ^contact-us$ /contact-us.php [L]
+RewriteRule ^home$ /index.php [L]
+RewriteRule ^category$ /category.php [L]
+RewriteRule ^web-d$ /web-d.php [L]
+RewriteRule ^training$ /training.php [L]
+RewriteRule ^bussiness_consultation$ /bussiness_consultation.php [L]
+RewriteRule ^digital-marketing$ /digital-marketing.php [L]
+RewriteRule ^e-commerce$ /e-commerce.php [L]
+RewriteRule ^ui-ux$ /ui-ux.php [L]
+RewriteRule ^mobile_app_development$ /mobile_app_development.php [L]
+RewriteRule ^case-study$ /case-study.php [L]
+RewriteRule ^case-study2$ /case-study2.php [L]
+RewriteRule ^career-details$ /career-details.php [L]
+RewriteRule ^services$ /services.php [L]
