@@ -10,7 +10,8 @@
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        media="all">
     <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
 	<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script> 
     <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
@@ -24,7 +25,37 @@
     <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
 
     <link rel="icon" href="/assets/images/favicon.png" type="image/gif">
-    <!-- preview-related stylesheets -->
+    <style type="text/css">
+		.slide_vertical_wrap {
+			left: 0;
+			top: 0;
+			height: 100vh;
+			overflow: hidden;
+		}
+
+		.slide_vertical_wrap img {
+			vertical-align: bottom;
+		}
+
+		.section_vertical {
+			margin-left: 350px;
+		}
+
+		.section_vertical header {
+			background: #eee;
+			padding: 20px;
+			margin-bottom: 20px;
+		}
+
+		.section_vertical header h1 {
+			font-size: 1.5em;
+			font-weight: bold;
+		}
+	</style>
+	
+	
+	
+	<!-- preview-related stylesheets 
     <style>
        
        
@@ -74,7 +105,7 @@
 }
 		
 		
-    </style>
+    </style>-->
 </head>
 
 <body>
@@ -91,21 +122,23 @@ $who_we_are = $stmtwho_we_are->fetch();
                 <div class="col">
                     <div class="whowe-sec">
                         <div class="whowe-text" data-aos="fade-right"  data-aos-duration="1000">
-                            <h2 class="display-3">Who We <span class="color_one">Are.</span></h2>
+                            <h1 class="display-3">Who We <span class="color_one">Are.</span></h1>
                             <p><?php echo $who_we_are['content1']; ?>
                             </p>
                                
                         </div>
-                        <!-- <div class="whowe-img">
-                            <div id="example2">
-                                <img src="assets/images/whoweare/scrollimg.png"  class="crossover-img" alt="img" />
-                             </div>
-                        </div> -->
 						<div class="whowe-img">
-						 <marquee  behavior="scroll" direction="up">         
+						
+							<div class="slide_vertical_wrap">
+								<ul class="slide_vertical">
+									<li><img src="assets/images/scrollimg.jpg" alt="" /></li>
+									<li><img src="assets/images/scrollimg.jpg" alt="" /></li>
+								</ul>
+							</div>
+						<!-- <marquee  behavior="scroll" direction="up">         
 								  <img src="<?php echo str_replace('../','',$who_we_are['image1']); ?>"  alt="about us"> 
 							</marquee> 
-                            <!-- <div id="">
+                            <div id="">
                                 <img src="assets/images/whoweare/scrollimg.png"  class="vert-move" alt="img" />
                              </div> -->
                         </div>
@@ -150,9 +183,9 @@ $who_we_are = $stmtwho_we_are->fetch();
                 <div class="col-md-12">
                     <div class="our-value-sec">
                         <div class="our-value-left" data-aos="fade-right"  data-aos-duration="1000">
-                            <h1>Our Values, Our Driving force.
-                                We let our values navigate us through <strong>success.</strong></h1>
-                        </div>
+                            <h3>Our Values, Our Driving force.
+                                We let our values navigate us through <strong>success.</strong></h3>
+                        </div>   
                         <div class="whowe-hr"></div>
 
                         <div class="our-value-right"  data-aos="fade-left"  data-aos-duration="1000">
@@ -191,9 +224,34 @@ $who_we_are = $stmtwho_we_are->fetch();
 	<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
     <!-- script -->
 
-   
-    <!---------  end------------>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="assets/js/start.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="assets/js/jquery.scrollimageinside.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="assets/js/general.js"></script>
 
+    <!---------  end------------>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="assets/js/infiniteslidev2.js"></script>
+
+	<script type="text/javascript">
+		$(function () {
+			$('.slide_vertical').infiniteslide({
+				direction: 'down',
+				pauseonhover: false
+			});
+		});
+	</script>
     <!-- slider JS files -->
     <script>
         $(document).ready(function () {
@@ -202,7 +260,18 @@ $who_we_are = $stmtwho_we_are->fetch();
             $("#smenu").click(function(){
 	  $(".sm-menu").toggle();
 	});
-
+	$(".hovermenu").hover(
+		function(){
+					$(".bgmenuhover").show();
+			});
+	$(".innermenu").hover(
+		function(){
+					$(".bgmenuhover").show();
+			},
+			function(){
+					$(".bgmenuhover").hide();
+			}
+			);
 
             $("#example2").click(function () {
                 $(".sm-menu").toggle();

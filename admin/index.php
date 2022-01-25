@@ -1,10 +1,12 @@
 <?php  
+date_default_timezone_set("Asia/Kolkata");
  session_start();  
 
  if(isset($_SESSION["name"]))  
  {  
     $username = $_SESSION['name'];
- 
+	$userid = $_SESSION["user_id"];
+	
  }  
  else  
  {  
@@ -13,13 +15,7 @@
  ?> 
  <?php include('../inc/connection.php');	
  $conn1 = DB(); 
- $stmtside = $conn1->query("SELECT name FROM section order by id asc ");
- $dataside = $stmtside->fetchAll();
 
-$stmtsidebar = $conn1->query("SELECT role_id FROM admin where name='$username'"); 
-
-$datasidebar = $stmtsidebar->fetch();
-$role_id = $datasidebar['role_id'];
 ?>
 
 <!DOCTYPE html>
@@ -29,7 +25,7 @@ $role_id = $datasidebar['role_id'];
     <link rel="apple-touch-icon" href="app-assets/images/ico/apple-icon-120.png">
     <link rel="shortcut icon" type="image/x-icon" href="https://themeselection.com/demo/chameleon-admin-template/app-assets/images/ico/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i,600,600i,700,700i%7CComfortaa:300,400,700" rel="stylesheet">
-
+    <link href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css" rel="stylesheet">
     <!-- BEGIN: Vendor CSS-->
     <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/vendors.min.css">
     <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/forms/toggle/switchery.min.css">

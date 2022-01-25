@@ -1,4 +1,5 @@
-<div class="col-md-4">
+		<div class="col-md-4">
+			<div class="blog-sidebar">
 				<div class="aside-widget">
 					<div class="section-title">
 						<h3 class="title">Categories</h3>
@@ -12,7 +13,7 @@
                                   $blog_count = $stmt_count->fetch();
                                 
                                 ?>
-							<li><a href="http://localhost/masters//category/cat/<?php echo strtolower($cat['cat']); ?>"><?php echo $cat['cat']; ?><span><?php echo $blog_count['countd']; ?></span></a></li>
+							<li><a href="http://localhost/infotech/category/cat/<?php echo strtolower($cat['cat']); ?>"><?php echo $cat['cat']; ?><span><?php echo $blog_count['countd']; ?></span></a></li>
                             <?php } ?>
 							
 						</ul>
@@ -33,9 +34,10 @@
 							$dateObj   = DateTime::createFromFormat('!m', $mnth['month']);
 							$monthName = $dateObj->format('F');
 							?>
-							<li><a href="http://localhost/masters//month/date/<?php echo $monthName; ?>"><?php echo $monthName; ?> <span><?php echo $mnth['totalb']; ?></span></a></li>					
+							<li><a href="/month/date/<?php echo $monthName; ?>"><?php echo $monthName; ?> <span><?php echo $mnth['totalb']; ?></span></a></li>					
 					<?php } ?>
 						</ul>
 					</div>
 				</div>
 			</div>
+		</div>

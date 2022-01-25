@@ -2,35 +2,34 @@
 include('inc/connection.php');
 $conn = DB(); 
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);    
-$page_name = basename($_SERVER['REQUEST_URI'], '?' . $_SERVER['QUERY_STRING']); ?>
+echo $page_name = basename($_SERVER['REQUEST_URI'], '?' . $_SERVER['QUERY_STRING']); ?>
 
    <header>
         <!-- Creating Nav Bar  -->
         <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
             <div class="container">
                 <a href="/" class="navbar-brand">
-                    <img class="logo" src="http://localhost/masters//assets/images/logo.png">
+                    <img class="logo" src="/assets/images/logo.svg">
                 </a>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link <?php if($page_name =='index.php'){ echo'active'; }else{} ?>" href="/">Home </a></li>
-                        <li class="nav-item"><a class="nav-link <?php if($page_name =='who-we-are.php'){ echo'active'; }else{} ?>" href="http://localhost/masters//who-we-are">who we are  </a></li>
-                        <li class="nav-item"><a class="nav-link <?php if($page_name =='portfolio.php'){ echo'active'; }else{} ?>" href="http://localhost/masters//portfolio"> Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link <?php if($page_name =='index.php'){ echo'active'; }else{} ?>" href="http://localhost/masters/index.php">Home </a></li>
+                        <li class="nav-item"><a class="nav-link <?php if($page_name =='who-we-are'){ echo'active'; }else{} ?>" href="/who-we-are">who we are  </a></li>
+                        <li class="nav-item"><a class="nav-link <?php if($page_name =='our-portfolio'){ echo'active'; }else{} ?>" href="/our-portfolio"> Portfolio</a></li>
 						<li class="nav-item">
-								<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="/services" role="button" aria-haspopup="true" aria-expanded="false">Our Services</a>
-								<div class="dropdown-menu">
-									<a class="dropdown-item" href="/web-d">Website development</a>
-								<a class="dropdown-item" href="/mobile_app_development">Mobile app development</a>
-								<a class="dropdown-item" href="/ui-ux">UI/UX design</a>
-								<a class="dropdown-item" href="/e-commerce">E-commerce</a>
-								<a class="dropdown-item" href="/digital-marketing">Digital Marketing</a>
-								<a class="dropdown-item" href="/bussiness_consultation">Business consultation</a>
-								<a class="dropdown-item" href="/training">Training and internship</a>
+								<a class="nav-link hovermenu"  href="/our-services" >Our Services</a>
+								<div class="dropdown-menu bgmenuhover">
+								<a class="dropdown-item innermenu" href="/website-development-services">Website development</a>
+								<a class="dropdown-item innermenu" href="/mobile-app-development-services">Mobile app development</a>
+								<a class="dropdown-item innermenu" href="/ui-and-ux-services">UI/UX design</a>
+								<a class="dropdown-item innermenu" href="/e-commerce-services">E-commerce</a>
+								<a class="dropdown-item innermenu" href="/digital-marketing-services">Digital Marketing</a>
+								<a class="dropdown-item innermenu" href="/bussiness-consultation-services">Business consultation</a>
+								<a class="dropdown-item innermenu" href="/training-and-internship">Training and internship</a>
 								</div>
 						</li>
-                        <!--li class="nav-item"><a class="nav-link <?php //if($page_name =='career.php'){ echo'active'; }else{} ?>" href="/career"> Careers</a></li-->
-						<li class="nav-item"><a class="nav-link <?php if($page_name =='blog.php'){ echo'active'; }else{} ?>" href="/blog"> Blogs</a></li>
-                        <li class="nav-item"><a class="nav-link <?php if($page_name =='contact-us.php'){ echo'active'; }else{} ?>" href="/contact-us"> Contact </a></li>
+						<li class="nav-item"><a class="nav-link <?php if($page_name =='blog'){ echo'active'; }else{} ?>" href="/blog"> Blogs</a></li>
+                        <li class="nav-item"><a class="nav-link <?php if($page_name =='contact-us'){ echo'active'; }else{} ?>" href="/contact-us"> Contact </a></li>
                     </ul>
                 </div>
                 <div class="top_button">
@@ -44,21 +43,21 @@ $page_name = basename($_SERVER['REQUEST_URI'], '?' . $_SERVER['QUERY_STRING']); 
                             <ul>
                                 <li class="display-1 fw-bold"><a href="/">Home</a></li>
                                 <li class="display-1 fw-bold"><a href="/who-we-are">About</a></li>
-                                <li class="display-1 fw-bold " id="smenu"><a href="#">Services</a></li>
-								<li class="display-1 fw-bold " id="smenu"><a href="/portfolio">Portfolio</a></li>
+                                <li class="display-1 fw-bold " id="smenu"><a href="/our-services">Services</a></li>
+								<li class="display-1 fw-bold " id="smenu"><a href="/our-portfolio">Portfolio</a></li>
 								<li class="display-1 fw-bold " id="smenu"><a href="/career">Careers</a></li>
                                 <li class="display-1 fw-bold"><a href="/contact-us">Get a quote</a></li>
                                 <li class="display-1 fw-bold"><a href="/blog">Blog</a></li>
 								
                             </ul>
 							<div class="sm-menu" style="display:none;">
-								<a class="dropdown-item" href="/web-d">Website development</a>
-								<a class="dropdown-item" href="/mobile_app_development">Mobile app development</a>
-								<a class="dropdown-item" href="/ui-ux">UI/UX design</a>
-								<a class="dropdown-item" href="/e-commerce">E-commerce</a>
-								<a class="dropdown-item" href="/digital-marketing">Digital Marketing</a>
-								<a class="dropdown-item" href="/bussiness_consultation">Business consultation</a>
-								<a class="dropdown-item" href="/training">Training and internship</a>
+								<a class="dropdown-item" href="/website-development-services">Website development</a>
+								<a class="dropdown-item" href="/mobile-app-development-services">Mobile app development</a>
+								<a class="dropdown-item" href="/ui-and-ux-services">UI/UX design</a>
+								<a class="dropdown-item" href="/e-commerce-services">E-commerce</a>
+								<a class="dropdown-item" href="/digital-marketing-services">Digital Marketing</a>
+								<a class="dropdown-item" href="/bussiness-consultation-services">Business consultation</a>
+								<a class="dropdown-item" href="/training-and-internship">Training and internship</a>
 							</div>
                         </nav>
                     </div>

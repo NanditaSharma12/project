@@ -2,7 +2,26 @@
 <html lang="en">
 
 <head>
-    
+    <title>Training</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+	<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+	<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/fixes.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/responsive_col.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/responsive_col_sm.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/responsive_col_md.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/responsive_col_lg.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/assets/css/carrousel.css" />
+    <link rel="icon" href="/assets/images/favicon.png" type="image/gif">
+    <!-- preview-related stylesheets -->
     <style>
     </style>
 </head>
@@ -23,7 +42,7 @@
                 </div>
                 <div class="col-12 col-md-6 col-lg-6 ">
                     <div class="training-img">
-                        <img class="img-responsive tra-img" src="http://localhost/masters/assets/images/training/1.webp">
+                        <img class="img-responsive tra-img" src="assets/images/training/1.webp">
                     </div>
                 </div>
             </div>
@@ -39,24 +58,24 @@
                     <div class="trning-and-internship">
                         <div class="trning">
                             <div class="trning_img">
-                                <img class="img-responsive t-i-img" src="http://localhost/masters/assets/images/training/2.webp">
+                                <img class="img-responsive t-i-img" src="assets/images/training/2.webp">
                             </div>
                             <div class="trning_text">
-                                <h3>Training</h3>
+                                <h2>Training</h2>
                                 <p>Jumpstart your career with ourworld-class standards to
                                     furtherforge your future.</p>
-                                <button class=" btn_service btn_white_blue"><a href="http://localhost/masters/application.php">Apply Now</a></button>
+                                <button class=" btn_service btn_white_blue"><a href="application.php">Apply Now</a></button>
                             </div>
                         </div>
                         <div class="Internship">
                             <div class="intern_img">
-                                <img class="img-responsive t-i-img1" src="http://localhost/masters/assets/images/training/3.webp">
+                                <img class="img-responsive t-i-img1" src="assets/images/training/3.webp">
                             </div>
                             <div class="trning_text">
-                                <h3>Internship </h3>
+                                <h2>Internship </h2>
                                 <p class="trn-intern-para">Your fresh spark and passion is important to us. We consider
                                     it our responsibility to sharpen your talent.</p>
-                                <button class=" btn_service btn_color_two"><a href="http://localhost/masters/application.php">Apply Now</a></button>
+                                <button class=" btn_service btn_color_two"><a href="application.php">Apply Now</a></button>
                             </div>
                         </div>
                     </div>
@@ -74,7 +93,7 @@
                         <ul class="work-culture">
                             <li>
                                 <div class="work-info">
-                                    <img class="culture-img img-responsive" src="http://localhost/masters/assets/images/training/4.webp">
+                                    <img class="culture-img img-responsive" src="assets/images/training/4.webp">
                                     <h6 class="color_two">Work-life balance</h6>
                                     <p>Coffee breaks, exercise sessions, knowledge
                                         sharing session and much more to kill
@@ -83,7 +102,7 @@
                             </li>
                             <li>
                                 <div class="work-info">
-                                    <img class="culture-img img-responsive" src="http://localhost/masters/assets/images/training/5.webp">
+                                    <img class="culture-img img-responsive" src="assets/images/training/5.webp">
                                     <h6 class="color_two">Activities</h6>
                                     <p>Small and curious activities to
                                         regain your freshness. Fancy a
@@ -92,7 +111,7 @@
                             </li>
                             <li>
                                 <div class="work-info">
-                                    <img class="culture-img img-responsive" src="http://localhost/masters/assets/images/training/6.webp">
+                                    <img class="culture-img img-responsive" src="assets/images/training/6.webp">
                                     <h6 class="color_two">Gifts</h6>
                                     <p>We make sure you never run out
                                         of memories and MOMENTOS!</p>
@@ -100,7 +119,7 @@
                             </li>
                             <li>
                                 <div class="work-info">
-                                    <img class="culture-img img-responsive" src="http://localhost/masters/assets/images/training/7.webp">
+                                    <img class="culture-img img-responsive" src="assets/images/training/7.webp">
                                     <h6 class="color_two">Social Events</h6>
                                     <p>A hill station retreat, bicycle race, or
                                         festival celebrations we have dozens
@@ -132,7 +151,7 @@
                         </div>
                         <div class="about-us-img">
 
-                                <img class="img-responisive about-img" src="http://localhost/masters/assets/images/training/about.webp" />
+                                <img class="img-responisive about-img" src="assets/images/training/about.webp" />
                            
                             <div class="about-overlay-text">
                                 <h3 class="overlay-heading">About us</h3>
@@ -145,7 +164,7 @@
                 <div class="col-12">
                     <div class="workspace">
                         <div class="workspace-img">
-                            <img class="img-responsive w-s-img" src="http://localhost/masters/assets/images/training/workspace.webp">
+                            <img class="img-responsive w-s-img" src="assets/images/training/workspace.webp">
                             <div class="about-overlay-text">
                                 <h3 class="overlay-heading">Workspace</h3>
                             </div>
@@ -162,7 +181,18 @@
     <!------section 4 end--------->
     <?php include('inc/footer.php'); ?>
 	<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="assets/js/start.js" type="text/javascript"></script>
+    <script src="assets/js/jquery.min.js" />
+    <script src="assets/js/jquery.royalslider.min.js" />
     
+ 
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="assets/js/general.js"></script>
     <!---------  end------------>
     <script>
     $(document).ready(function() {
@@ -170,7 +200,18 @@
         $("#smenu").click(function() {
             $(".sm-menu").toggle();
         });
-
+	$(".hovermenu").hover(
+		function(){
+					$(".bgmenuhover").show();
+			});
+	$(".innermenu").hover(
+		function(){
+					$(".bgmenuhover").show();
+			},
+			function(){
+					$(".bgmenuhover").hide();
+			}
+			);
 
         const cards = document.querySelectorAll(".card");
         cards.forEach((c) => {

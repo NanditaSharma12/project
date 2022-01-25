@@ -1,37 +1,19 @@
 <?php  
 
-
-
  session_start();  
 
-
-
  if(isset($_SESSION["name"]))  
-
  {  
-
     $username = $_SESSION['name'];
 
- 
-
  }  
-
  else  
-
  {  
-
       header("location:signin.php");  
-
  }  
-
  $message = ""; 
-
-
-
  try  
-
  {  
-
 	include('../inc/connection.php');
 
 	$conn = DB(); 
@@ -75,11 +57,7 @@
 <!DOCTYPE html>
 
 <html class="loading" lang="en" data-textdirection="ltr">
-
-  <!-- BEGIN: Head-->
-
-  
-
+<!-- BEGIN: Head-->
 <!-- Mirrored from themeselection.com/demo/chameleon-admin-template/html/ltr/vertical-menu-template/form-layout-basic.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 23 Nov 2021 06:30:57 GMT -->
 
 <head>
@@ -91,8 +69,6 @@
     <link rel="shortcut image" type="image/x-image" href="https://themeselection.com/demo/chameleon-admin-template/app-assets/images/ico/favimage.ico">
 
     <link href="https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i,600,600i,700,700i%7CComfortaa:300,400,700" rel="stylesheet">
-
-
 
     <!-- BEGIN: Vendor CSS-->
 
@@ -128,9 +104,6 @@ $role_id = $datasidebar['role_id'];
     <link rel="stylesheet" type="text/css" href="app-assets/css/components.min.css">
 
     <!-- END: Theme CSS-->
-
-
-
     <!-- BEGIN: Page CSS-->
 
     <link rel="stylesheet" type="text/css" href="app-assets/css/core/menu/menu-types/vertical-menu.min.css">
@@ -138,30 +111,19 @@ $role_id = $datasidebar['role_id'];
     <link rel="stylesheet" type="text/css" href="app-assets/css/core/colors/palette-gradient.min.css">
 
     <!-- END: Page CSS-->
-
-
-
     <!-- BEGIN: Custom CSS-->
 
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
     <!-- END: Custom CSS-->
 
-
-
   </head>
 
   <!-- END: Head-->
-
-
-
+ 
   <!-- BEGIN: Body-->
 
   <body class="vertical-layout vertical-menu 2-columns   fixed-navbar" data-open="click" data-menu="vertical-menu" data-color="bg-gradient-x-purple-blue" data-col="2-columns">
-
-
-
-   
 
     <!-- BEGIN: Header-->
 
@@ -169,11 +131,7 @@ $role_id = $datasidebar['role_id'];
 
     <!-- END: Header-->
 
-
-
 	<?php include('sidebar.php'); ?>
-
-
 
     <!-- BEGIN: Content-->
 
@@ -203,8 +161,6 @@ $role_id = $datasidebar['role_id'];
 
                   </li>
 
-                  
-
                   <li class="breadcrumb-item active"><a href="https://masterinfotech.com/admin/Uploads.php">Uploads</a>
 
                   </li>
@@ -223,29 +179,16 @@ $role_id = $datasidebar['role_id'];
 
 <section id="basic-form-layouts">
 
-
-
-
-
 	<div class="row match-height">
-
-		
 
 		<div class="col-md-12">
 
 			<div class="card">
-
-			
-
 				<div class="card-content collapse show">
 
 					<div class="card-body">
 
 <?php 
-
-	
-
-	
 
 	if(isset($_GET['id'])){ 
 
@@ -274,8 +217,6 @@ $role_id = $datasidebar['role_id'];
                                             <?php foreach($datablog as $blog){ ?>
 			                                <option value="<?php echo $blog['id']; ?>" <?php if($who['id']== $blog['id']){ echo'selected'; }else{} ?>><?php echo $blog['title']; ?></option>
 											<?php } ?>
-                                            
-			                           
 
 			                             </select>
 
@@ -291,11 +232,7 @@ $role_id = $datasidebar['role_id'];
 
 								</div>
 
-
-
 							</div>
-
-
 
 							<div class="form-actions">
 
@@ -310,18 +247,10 @@ $role_id = $datasidebar['role_id'];
 									<i class="fa fa-check"></i> Update
 
 								</button>
-
 							</div>
-
 						</form>
 
-
-
-
-
 <?php }else{ ?>
-
-
 
 	<form class="form"  method="post" action="" enctype="multipart/form-data">
 
@@ -349,8 +278,6 @@ $role_id = $datasidebar['role_id'];
 								</div>
 
 							</div>
-
-
 
 							<div class="form-actions">
 

@@ -1,13 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<<head>
-
+<head>
+    <title>Master Infotech</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://localhost/infotech/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+	<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script> 
+    <link rel="stylesheet" type="text/css" href="http://localhost/infotech/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="http://localhost/infotech/assets/css/fixes.css">
+    <link rel="stylesheet" type="text/css" href="http://localhost/infotech/assets/css/responsive_col.css">
+    <link rel="stylesheet" type="text/css" href="http://localhost/infotech/assets/css/responsive_col_sm.css">
+    <link rel="stylesheet" type="text/css" href="http://localhost/infotech/assets/css/responsive_col_md.css">
+	<link rel="stylesheet" type="text/css" href="http://localhost/infotech/assets/css/responsive_col_lg.css">
+	<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+	<link rel="stylesheet" href="http://localhost/infotech/assets/css/carrousel.css"/>
+	<link rel="icon" href="http://localhost/infotech/assets/images/favicon.png" type="image/gif">
+    <!-- preview-related stylesheets -->
+   
 </head>
 
 <body>
-   <?php include('inc/header.php');
+   <?php
+
+   include('inc/header.php');
+ 
 include('inc/queries.php');
+
    ?>
     <!-----Section 1--------->
     <section class="section1 page-section position-relative">
@@ -17,27 +41,34 @@ include('inc/queries.php');
         <div class="container">
             <div class="row d-md-none d-block">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                    <img class="img-fluid block-img fancy_border" src="http://localhost/masters/assets/images/master1.jpg">
+                    <img class="img-fluid block-img" src="http://localhost/infotech/assets/images/master1.jpg">
                 </div>
             </div>
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 dev-tech">
 					<div class="baner">
 						<div class="baner-info"  data-aos="fade-left"  data-aos-duration="1000">
-							<h3 class="display-3 fw-bold lh-base color_two">Developing Technologies and <br><span class="color_one"> Trust</span></h3>
+							<!--<h1>IT Services Company </h1> -->
+							<h2 class="display-3 fw-bold lh-base color_two">Developing Technologies and <span class="color_one"> Trust</span></h2>
 							<p class="color_two"><?php echo $tech_content['description']; ?></p>
-							<button class=" btn_color_one"><a href="http://localhost/masters/who-we-are.php">learn more</a></button>
+							<button class=" btn_color_one"><a href="/who-we-are">learn more</a></button>
 						</div>
 						<div class="baner-img d-md-block d-none"  data-aos="fade-right"  data-aos-duration="1000">
-							<img class="img-fluid block-img" src="http://localhost/masters/assets/images/triangle.webp">
+							
+							<div class="cards">
+							  <div class="img"> <span></span><span></span><span></span><span></span></div>
+							 
+							</div>
+							
 						</div>
 					</div>
                 </div>
+				<!--<div class="col-12 col-sm-12 col-md-12 col-lg-12"> <a href="#section2">down</a></div>--> 
             </div>
         </div>
     </section>
     <!-----Section 2---->
-    <section class="section2 page-section h-100 hide" style="display:none">
+    <section class="section2 page-section h-100 hide" style="display:none" id="section2">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
@@ -63,15 +94,15 @@ include('inc/queries.php');
 									<p class="panel-para"><?php echo $data['description']; ?></p>
 									<button class=" btn_service btn_color_two">
                                     <?php if($data['title'] == 'Website Development'){?>
-                                        <a href="http://localhost/masters//web-d.php">Learn More</a></button>
+                                        <a href="/web-d">Learn More</a></button>
                                    <?php  }elseif($data['title'] == 'Mobile App Development'){?>
-                                    <a href="http://localhost/masters//mobile_app_development.php">Learn More</a></button>
+                                    <a href="/mobile_app_development">Learn More</a></button>
                                     <?php  }elseif($data['title'] == 'UI/UX Design'){?>
-                                    <a href="http://localhost/masters//ui-ux.php">Learn More</a></button>
+                                    <a href="/ui-ux">Learn More</a></button>
                                      <?php  }elseif($data['title'] == 'DIGITAL MARKETING'){?>
-                                    <a href="http://localhost/masters//digital-marketing.php">Learn More</a></button>
+                                    <a href="/digital-marketing">Learn More</a></button>
                                     <?php }elseif($data['title'] == 'Ecommerce'){?>
-                                    <a href="http://localhost/masters//e-commerce.php">Learn More</a></button>
+                                    <a href="/e-commerce">Learn More</a></button>
                                     <?php } ?> 
                                     
 								</div>
@@ -125,59 +156,44 @@ include('inc/queries.php');
 				<li>
                     <div class="services_inside  aos-init aos-animate" data-aos="flip-right" data-aos-duration="1000">
 							<div>
-								<h2 class="display-3 fw-bold color_two">Enhancing  your  <span class="color_one">Digital  Experience </span> with our extensive IT services</h2>  
+								<h2 class="display-3 fw-bold color_two">Enhancing  your  <br><span class="color_one">Digital  Experience <br></span> with our extensive <br> IT services</h2>  
 							</div>
 						</a>
                     </div>
                 </li>
+				<?php
+                        $i =1;
+                        foreach($categories as $data){?>
 				<li>
                     <div class="services_inside  aos-init aos-animate" data-aos="flip-right" data-aos-duration="1000">
-							<a href="http://localhost/masters//web-d.php">
-							<img src="http://localhost/masters/assets/images/web-development.png">
+							  <?php if($data['title'] == 'Website Development'){?>
+                                        <a href="/web-d">
+										<img src="assets/images/web-development.png">
+                                   <?php  }elseif($data['title'] == 'Mobile App Development'){?>
+                                    <a href="/mobile_app_development">
+									<img src="assets/images/mobile-development.png">
+                                    <?php  }elseif($data['title'] == 'UI/UX Design'){?>
+                                    <a href="/ui-ux">
+									<img src="assets/images/ux.png">
+                                     <?php  }elseif($data['title'] == 'DIGITAL MARKETING'){?>
+                                    <a href="/digital-marketing">
+                                    <?php }elseif($data['title'] == 'Ecommerce'){?>
+									
+                                    <a href="/e-commerce">
+									<img src="assets/images/ecommerce.png">
+                                    <?php } ?> 
+							
+						
 							<div>
-								<h5 class="mb-2">Website Development</h5>
-								<p>With our best web development services, we bring you a responsive website design that not just attracts traffic but also a higher base of customers. </p>
+								<h3 class="mb-2"><?php echo $data['title']; ?></h3>
+								<p><?php echo $data['description']; ?></p>
 								<i class="fal fa-arrow-right"></i>
 							</div>
 						</a>
                     </div>
                 </li>
-				<li>
-                    <div class="services_inside  aos-init aos-animate" data-aos="flip-right" data-aos-duration="1000">
-							<a href="http://localhost/masters//mobile_app_development.php">
-							<img src="http://localhost/masters/assets/images/mobile-development.png">
-							<div>
-								<h5 class="mb-2">Mobile App Development</h5>
-								<p>With our superior Mobile App Design and Development services, we bring you a customized app with seamless usability, with our user friendly application you witness a magnified rise in the growth of your business </p>
-								<i class="fal fa-arrow-right"></i>
-							</div>
-						</a>
-                    </div>
-                </li>
-				<li>
-                    <div class="services_inside  aos-init aos-animate" data-aos="flip-right" data-aos-duration="1000">
-							<a href="http://localhost/masters//ui-ux.php">
-							<img src="http://localhost/masters/assets/images/ux.png">
-							<div>
-								<h5 class="mb-2">UI/UX Design</h5>
-								<p>Our UI/UX services empower you to attain much higher user retention. When it comes to our design process we are extra focused on modern aesthetic values. </p>
-								<i class="fal fa-arrow-right"></i>
-							</div>
-						</a>
-                    </div>
-                </li>
-				<li>
-                    <div class="services_inside  aos-init aos-animate" data-aos="flip-right" data-aos-duration="1000">
-							<a href="http://localhost/masters//e-commerce.php">
-							<img src="http://localhost/masters/assets/images/ecommerce.png">
-							<div>
-								<h5 class="mb-2">Ecommerce</h5>
-								<p>Our state-of-the-art ECommerce Website Development practice enables you to witness an expansion of your Ecommerce platform like never before, with an even higher graph of sales. </p>
-								<i class="fal fa-arrow-right"></i>
-							</div>
-						</a>
-                    </div>
-                </li>
+						<?php } ?>
+				
 				
 			
 			
@@ -186,28 +202,28 @@ include('inc/queries.php');
                 <li>
                     <div class="services_inside " data-aos="flip-right"  data-aos-duration="1000">
                     <?php if($datax['title'] == 'Digital Marketing'){?>
-                                    <a href="http://localhost/masters//digital-marketing.php">
-										<img src="http://localhost/masters/assets/images/digital-campaign.png" >
+                                    <a href="/digital-marketing">
+										<img src="assets/images/digital-campaign.png" >
 										<div>
-											<h5 class="mb-2"><?php echo $datax['title']; ?></h5>
+											<h3 class="mb-2"><?php echo $datax['title']; ?></h3>
 											<p><?php echo $datax['description']; ?></p>
 											<i class="fal fa-arrow-right"></i>
 										</div>
 									</a>
                                     <?php  }elseif($datax['title'] == 'Business Consultation'){?>
-                                    <a href="http://localhost/masters//bussiness_consultation.php"> 
-										<img src="http://localhost/masters/assets/images/teamwork.png" />
+                                    <a href="/bussiness_consultation"> 
+										<img src="assets/images/teamwork.png" />
 										<div>
-											<h5 class="mb-2"><?php echo $datax['title']; ?></h5>
+											<h3 class="mb-2"><?php echo $datax['title']; ?></h3>
 											<p><?php echo $datax['description']; ?></p>
 											<i class="fal fa-arrow-right"></i>
 										</div>
 									</a>
                                      <?php  }elseif($datax['title'] == 'Training and internship'){?>
-                                    <a href="http://localhost/masters//training.php">
-										<img src="http://localhost/masters/assets/images/online-learning.png" />
+                                    <a href="/training">
+										<img src="assets/images/online-learning.png" />
 										<div>
-											<h5 class="mb-2"><?php echo $datax['title']; ?></h5>
+											<h3 class="mb-2"><?php echo $datax['title']; ?></h3>
 											<p><?php echo $datax['description']; ?></p>
 											<i class="fal fa-arrow-right"></i>
 										</div>
@@ -230,9 +246,9 @@ include('inc/queries.php');
             <div class="row align-items-center banner-row">
                 <div class="col-md-4">
                     <div class="slider-left" data-aos="slide-right"  data-aos-duration="1000">
-                        <h1>
+                        <h2>
                             Four <span class="red-color"> D</span><span class="lower-case"> s</span><br> of our<br> work<br> Process!
-                        </h1>
+                        </h2>
 						<div class="m-hide">
                         <div class="d-flex">
                             <h3>0</h3>
@@ -308,7 +324,7 @@ include('inc/queries.php');
                 </div>
                 <div class="col-md-4 m-align-right">
                     <div class="slider-right" data-aos="slide-up"  data-aos-duration="1000">
-                        <img src="http://localhost/masters/assets/images/project/slider-border.png" alt="" class="border-slide">
+                        <img src="assets/images/project/slider-border.png" alt="" class="border-slide">
                         <!-- Slider -->
                         <div class="swiper slide-images">
                             <div class="swiper-wrapper">
@@ -344,7 +360,7 @@ include('inc/queries.php');
 							<p class="color_two"><?php echo $choose_best['description']; ?></p>
 						</div>
 						<div class="baner-img" data-aos="fade-right"  data-aos-duration="1000">
-							<img class="img-fluid" src="http://localhost/masters/assets/images/person.webp">
+							<img class="img-fluid" src="assets/images/person.webp">
 						</div>
 					</div>
                  
@@ -372,14 +388,14 @@ include('inc/queries.php');
                 </div>
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 text-center">
                     <div class="bg_red" data-aos="fade-right"  data-aos-duration="1000">
-                        <button class="mt-5 btn_color_two"><a href="http://localhost/masters//portfolio.php">View All Projects</a></button>
+                        <button class="mt-5 btn_color_two"><a href="/portfolio">View All Projects</a></button>
                     </div>
                 </div>
 			</div>
 						<div class="portfolio_sec">	
                             <?php foreach($portfolio  as $port){ ?>	
 							<div class="wrapper" data-aos="flip-left"  data-aos-duration="1000">		
-								<div class="card"><a href="http://localhost/masters//portfolio.php"><img src="<?php echo str_replace('../','',$port['image']); ?>"/ ><i class="fal fa-arrow-right"></i></a></div>	
+								<div class="card"><a href="/portfolio"><img src="<?php echo str_replace('../','',$port['image']); ?>"/ ><i class="fal fa-arrow-right"></i></a></div>	
 							</div>	
                             <?php } ?>
 								
@@ -405,7 +421,7 @@ include('inc/queries.php');
 							<!-- <button class=" btn_color_one"><a href="#">learn more</a></button> -->
 						</div>
 						<div class="baner-img" data-aos="fade-left"  data-aos-duration="1000">
-							 <img class="img-fluid" src="http://localhost/masters/assets/images/quality_img.webp" alt="QUALITY ASSURANCE">
+							 <img class="img-fluid" src="assets/images/quality_img.webp" alt="QUALITY ASSURANCE">
 						</div>
 					</div>
                 </div>
@@ -429,53 +445,53 @@ include('inc/queries.php');
 			<div CLASS="row">
 				<div class="col-md-12">
 					<div class="case-study-box">
-						<div class="case_study" data-aos="zoom-in"  data-aos-duration="1500" onclick="location.href='http://localhost/masters//case-study.php';" style="cursor: pointer;">
-							<img src="http://localhost/masters/assets/images/case-study/case-acc.webp" alt="">
+						<div class="case_study" data-aos="zoom-in"  data-aos-duration="1500" onclick="location.href='/case-study';" style="cursor: pointer;">
+							<img src="assets/images/case-study/case-acc.webp" alt="">
 							<div class="case-over">
 								<h3>ACCELPRO</h3>
 								 <p>AccelPro is a Fast Growing Indian Product Company that provides Secure Remote Access Products and Services with an Innovative Approach. Founded with a Mission to deliver Secure Access Products, meeting Customer Expectations in terms of Product Technology, Ease of Use,.....</p>
 								
-								 <button class=" btn_white_blue"><a href="http://localhost/masters//case-study.php">Learn More</a></button>
+								 <button class=" btn_white_blue"><a href="/case-study">Learn More</a></button>
 							</div>
 						</div>
-						<div class="case_study" data-aos="zoom-in"  data-aos-duration="1500" onclick="location.href='http://localhost/masters//case-study2.php';" style="cursor: pointer;">
-							<img src="http://localhost/masters/assets/images/case-study/case-tcc.webp" alt="">
+						<div class="case_study" data-aos="zoom-in"  data-aos-duration="1500" onclick="location.href='/case-study2';" style="cursor: pointer;">
+							<img src="assets/images/case-study/case-tcc.webp" alt="">
 							<div class="case-over">
 								<h3>The car club</h3>
 								<p>The Car Club is the last destination for premier exclusive and interesting luxury cars for you, established in the year 2001.... </p>
-								<button class=" btn_white_blue"><a href="http://localhost/masters//case-study2.php">Learn More</a></button> 
+								<button class=" btn_white_blue"><a href="/case-study2">Learn More</a></button> 
 							</div>
 						</div>
 						<div class="case_study" data-aos="zoom-in"  data-aos-duration="1500">
-							<img src="http://localhost/masters/assets/images/case-study/case-lh.webp" alt="">
+							<img src="assets/images/case-study/case-lh.webp" alt="">
 							<div class="case-over">
 								<h3>ludhiana heights</h3>
 								 <p></p>
-								<button class=" btn_white_blue"><a href="http://localhost/masters//case-study2.php">Learn More</a></button> 
+								<button class=" btn_white_blue"><a href="/case-study2">Learn More</a></button> 
 							</div>
 						</div>
 						<div class="case_study" data-aos="zoom-in"  data-aos-duration="1500">
-							<img src="http://localhost/masters/assets/images/case-study/case-wg.webp" alt="">
+							<img src="assets/images/case-study/case-wg.webp" alt="">
 							<div class="case-over">
 								<h3>watergate</h3>
 								<p></p>
-								<button class=" btn_white_blue"><a href="http://localhost/masters//case-study2.php">Learn Morew</a></button> 
+								<button class=" btn_white_blue"><a href="/case-study2">Learn Morew</a></button> 
 							</div>
 						</div>
 						<div class="case_study" data-aos="zoom-in"  data-aos-duration="1500">
-							<img src="http://localhost/masters/assets/images/case-study/case-oz.webp" alt="">
+							<img src="assets/images/case-study/case-oz.webp" alt="">
 							<div class="case-over">
 								<h3>ozzy</h3>
 								<p></p>
-								<button class=" btn_white_blue"><a href="http://localhost/masters//case-study2.php">Learn More</a></button> 
+								<button class=" btn_white_blue"><a href="/case-study2">Learn More</a></button> 
 							</div>
 						</div>
 						<div class="case_study" data-aos="zoom-in"  data-aos-duration="1500">
-							<img src="http://localhost/masters/assets/images/case-study/case-fd.webp" alt="">
+							<img src="assets/images/case-study/case-fd.webp" alt="">
 							<div class="case-over">
 								<h3>freedeals.com</h3>
 								<p></p>
-								<button class=" btn_white_blue"><a href="http://localhost/masters//case-study2.php">Learn More</a></button> 
+								<button class=" btn_white_blue"><a href="/case-study2">Learn More</a></button> 
 							</div>
 						</div>
 						
@@ -492,33 +508,35 @@ include('inc/queries.php');
    
 	<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
 	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" async></script>
+    <script src="/assets/js/flickity.pkgd.min.js" async></script>
+    <script src="/assets/js/start.js" type="text/javascript" async></script>
+	<script src="/assets/js/jquery.min.js" async></script>
+ 
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="/assets/js/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="/assets/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="/assets/js/swiper-bundle.min.js" async></script>
+<script src="/assets/js/general.js" async></script>
 
-<script>
-//Get the button
-var mybutton = document.getElementById("myBtn");
-
-// When the user scrolls down 2000px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 2000 || document.documentElement.scrollTop > 2000) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
-
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
-</script>
-
-   <!---------  end------------>
+   <!---------  end 
+   
+   $(".nav-link ").hover(function(){
+	  $(".dropdown-menu").toggle();
+	});
+   
+   
+   
+   ------------>
    
    <script>
 		$(document).ready(function () {
+   
+   
+   
+   
+   
    
 	$("#smenu").click(function(){
 	  $(".sm-menu").toggle();
@@ -564,11 +582,12 @@ $(".card").hover(
 
         });
 
+AOS.init();
 
 
     </script>
    
-  <script src="http://localhost/masters//assets/js/jquery.min.js"></script>
+  <script src="/assets/js/jquery.min.js"></script>
      <!--script src="/assets/js/carrousel.js"></script>
     <script >
         $(function () {
@@ -580,7 +599,27 @@ $(".card").hover(
         });
 		AOS.init();
     </script--> 
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
 
+// When the user scrolls down 2000px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 2000 || document.documentElement.scrollTop > 2000) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
 	
 </body>
 

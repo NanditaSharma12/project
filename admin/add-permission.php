@@ -70,7 +70,7 @@
 
 		}			 
 
-        header("location:https://masterinfotech.com/admin/manage-permission.php");   
+        header("location:http://localhost/infotech/admin/manage-permission.php");   
 
 		
 
@@ -109,7 +109,7 @@
 
 		}
 
-		header("location:https://masterinfotech.com/admin/manage-permission.php"); 
+		header("location:http://localhost/infotech/admin/manage-permission.php"); 
 
 	}
 
@@ -410,7 +410,7 @@ $role_id = $datasidebar['role_id'];
 
                                             <?php   foreach ($data as $row) { ?>
 
-			                                <option value="<?php echo $row['id']; ?>" <?php if($service['id'] == $row['id']){ echo'selected'; }else{} ?> ><?php echo $row['name']; ?></option>
+			                                <option value="<?php echo $row['id']; ?> <?php if($service['id'] == $row['id']){ echo'selected'; }else{} ?>" ><?php echo $row['name']; ?></option>
 
                                             <?php } ?>
 

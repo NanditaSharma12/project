@@ -1,4 +1,5 @@
-<div class="col-md-4">
+		<div class="col-md-4">
+			<div class="blog-sidebar">
 				<div class="aside-widget">
 					<div class="section-title">
 						<h3 class="title">Categories</h3>
@@ -39,3 +40,4 @@
 					</div>
 				</div>
 			</div>
+		</div>

@@ -2,7 +2,24 @@
 <html lang="en">
 
 <head>
-  
+    <title>Contact us</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet" media="all">
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/fixes.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/responsive_col.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/responsive_col_sm.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/responsive_col_md.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/responsive_col_lg.css">
+	<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+	<link rel="icon" href="/assets/images/favicon.png" type="image/gif">
+	<link rel="stylesheet" href="/assets/css/carrousel.css"/>
+    <!-- preview-related stylesheets -->
    <style>
 
 
@@ -42,6 +59,18 @@
      
    
 	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="assets/js/start.js" type="text/javascript"></script>
+	<script src="assets/js/jquery.min.js" />
+	<script src="assets/js/jquery.royalslider.min.js" />
+	
+ 
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script src="assets/js/general.js"></script>
 
    <!---------  end------------>
    
@@ -52,7 +81,18 @@
 	$("#smenu").click(function(){
 	  $(".sm-menu").toggle();
 	});
-
+	$(".hovermenu").hover(
+		function(){
+					$(".bgmenuhover").show();
+			});
+	$(".innermenu").hover(
+		function(){
+					$(".bgmenuhover").show();
+			},
+			function(){
+					$(".bgmenuhover").hide();
+			}
+			);
 
 const cards = document.querySelectorAll(".card");
 cards.forEach((c) => {

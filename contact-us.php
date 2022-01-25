@@ -2,19 +2,54 @@
 <html lang="en">
 
 <head>
+    <title>Contact us</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://localhost/infotech/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+	<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script> 
+    <link rel="stylesheet" type="text/css" href="http://localhost/infotech/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="http://localhost/infotech/assets/css/fixes.css">
+    <link rel="stylesheet" type="text/css" href="http://localhost/infotech/assets/css/responsive_col.css">
+    <link rel="stylesheet" type="text/css" href="http://localhost/infotech/assets/css/responsive_col_sm.css">
+    <link rel="stylesheet" type="text/css" href="http://localhost/infotech/assets/css/responsive_col_md.css">
+	<link rel="stylesheet" type="text/css" href="http://localhost/infotech/assets/css/responsive_col_lg.css">
+	<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+	<link rel="icon" href="http://localhost/infotech/assets/images/favicon.png" type="image/gif">
+	<link rel="stylesheet" href="http://localhost/infotech/assets/css/carrousel.css"/>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/css/intlTelInput.css" rel="stylesheet" media="screen">
    
-	<style> 
-	.error {
+    <!-- preview-related stylesheets -->
+   
+   <style> 
+	.error, .p_error {
             color: #ff0000;
 			float: left;
         }
 		
-	.success {
-			color: green;
-			float: left;
-	    }
+	.intl-tel-input.separate-dial-code .selected-flag {
+		background:none;
+	}
+	.intl-tel-input{
+		display:block;
+	}
+	.intl-tel-input.separate-dial-code .selected-dial-code {
+		padding-left:0px;
+	}
+	
+	.intl-tel-input .flag-container {
+    position: absolute;
+    top: 30px;
+    bottom: 0;
+    padding: 1px;
+	}
+ 
+
 	</style>
-   
 </head>
 
 <body>
@@ -38,7 +73,7 @@ $contact_us = $contactstmt->fetch();
                         <span>We look forward to hearing from you.</span></p>
                 </div>
                 <div class="col-12 col-md-12 col-lg-5 col-xl-5" data-aos="fade-right" data-aos-duration="1500">
-                    <img class="img-responsive contact-img" src="assets/images/con-img.png">
+                    <img class="img-responsive contact-img" src="assets/images/con-img.webp">
                 </div>
             </div>
         </div>
@@ -82,35 +117,32 @@ $contact_us = $contactstmt->fetch();
                 </div>
                 <div class="col-12 col-md-6 col-lg-6 col-xl-6">
                    <div class="query-form"  data-aos="fade-right" data-aos-duration="1500">
-				   
-					<form class="contact_form fw-bold text-center color_two" action="#" method="post" name="myform">
-					<p id="msg" style="display:none;"></p>
+					<form class="contact_form fw-bold text-center color_two" action="/mail" method="post">
                         <h3 class="">Send queries <span class="color_one">today!</span></h3>
-						<div class="form-group m-2 required">
-						<span class="success"></span>
-						</div>
+						<div class="form-group m-2 required"><span class="success"></span></div>
                         <div class="form-group m-2 required">
                             <label for="name">Name*</label>
-                            <input type="text" class="form-control" id="name" name="name"  />
+							
+                            <input type="text" class="form-control" id="name" name="name" required />
+							
 							<span class="error"></span>
-                        </div>
+					   </div>
                         <div class="form-group m-2 required">
                             <label for="email">Email*</label>
                             <input type="email" class="form-control" id="email" name="email" required />
 							<span class="error"></span>
                         </div>
                         <div class="form-group m-2 required">
-                            <label for="phone">Phone*</label>
-                            <input type="text" class="form-control" id="phone" name="phone" />
-							<span class="error"></span>
-                        </div>
+                            <label for="phone">Phone</label>
+							<input type="tel" class="phone form-control " id="phone" name="phone" required />
+							<span class="p_error"></span>
+					    </div>
                         <div class="form-group m-2 required">
-                            <label for="message">Message*</label>
+                            <label for="message">Project Description.*</label>
                             <textarea class="form-control" id="message" name="message" required></textarea>
 							<span class="error"></span>
                         </div>
-						 <!--<input type="button" value="Submit" id="clickme" onclick="validateForm()"/>-->
-                       <button type="button" class="btn btn_color_one" onclick="validateForm()">Submit</button>
+                        <button type="button" id="btnSubmit" name="sendmail" onclick="validateForm()" class="btn btn_color_one">Submit</button>
                     </form>
 				   </div>
                 </div>
@@ -122,62 +154,72 @@ $contact_us = $contactstmt->fetch();
     <?php include('inc/footer.php'); ?>
     <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
 
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/js/intlTelInput.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/js/intlTelInput.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/js/utils.js"></script>
 
-   <!---------  end------------>
-   
-       <script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
-    <script type="text/javascript">
-	
-	/*$(document).ready(function() {
+<script type="text/javascript">
+var telInput = $("#phone");
+  
 
-$("#clickme").on("click",function(){
-	
-	var name = $("#name").val();
-	var email = $("#email").val();
-	var phone = $("#phone").val();
-	var msg = $("#message").val();
-	
-	if(name ==''){
-		
-		$("#msg").text('Enter name ');
-		$("#msg").css('display:block');
-		
-	}else{
-	 var values = {"name":name,"email":email,"phone":phone,"message":msg,};
-	console.log(values);
-  $.ajax({
-        url: "mail.php",
-        type: "post",
-        data: values ,
-        success: function (response) {
-	console.log(response);
-           // You will get response from your PHP page (what you echo or print)
-        },
-        error: function(jqXHR, textStatus, errorThrown) {
-           console.log(textStatus, errorThrown);
-        }
-    }); 
-	}
+// initialise plugin
+telInput.intlTelInput({
+
+  allowExtensions: true,
+  formatOnDisplay: true,
+  autoFormat: true,
+  autoHideDialCode: true,
+  autoPlaceholder: true,
+  defaultCountry: "auto",
+  ipinfoToken: "yolo",
+
+  nationalMode: false,
+  numberType: "MOBILE",
+  //onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+ // preferredCountries: ['sa', 'ae', 'qa','om','bh','kw','ma'],
+  preventInvalidNumbers: true,
+  separateDialCode: true,
+  initialCountry: "in",
+  geoIpLookup: function(callback) {
+  $.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+    var countryCode = (resp && resp.country) ? resp.country : "";
+    callback(countryCode);
+  });
+},
+   utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/js/utils.js"
 });
 
-	});*/
+
+</script>
+  
+ 
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"
+        type="text/javascript"></script>
+    <script type="text/javascript">
 	
-	 function validateForm() {
+	function validateForm() {
 			var valid = true;
             if (isFormValid()) {
 				var name = $("#name").val();
 				var email = $("#email").val();
-				var phone = $("#phone").val();
+				var mob = $("#phone").val();
+				var code = $(".selected-flag").attr('title');
+				code = code.replace(/[^\d+-]/g,'');
+				var phone = code + "-" + mob;
+				//console.log(code);
 				var msg = $("#message").val();
-				var values = {"name":name,"email":email,"phone":phone,"message":msg,};
-				console.log(values);
+				var values = {"name":name,"email":email,"phone":phone,"message":msg};
+			
 				$.ajax({
 				url: "mail.php",
 				type: "post",
 				data: values ,
 				success: function (response) {
-			    $(".success").html("Thank you for your enquiry. We will revert you soon.");
-				valid = false;
+			   // console.log(response);
+				//$(".success").html("Thank you for your enquiry. We will revert you soon.");
+				 window.location.href= "thankyou.php";
+				 valid = false;
 				},
 				error: function(jqXHR, textStatus, errorThrown) {
 				console.log(textStatus, errorThrown);
@@ -187,21 +229,19 @@ $("#clickme").on("click",function(){
 			}
 			}); 
 				
-				
-				
 			}
 	 }
 
-	
 	function isFormValid() {
 		
 		//Initially default values;
             errorMessage = "";
             $(".error").html("");
+			$(".p_error").html("");
             var isValid = true;
             var regName = /^[a-zA-Z ]+$/;
 			var regemail=  /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-			var regphn = /^\d{10}$/;
+			//var regphn = /^\d$/;
 
             //Validate First name
             if ($("#name").val() == "") {
@@ -214,10 +254,10 @@ $("#clickme").on("click",function(){
                     $("#name").siblings(".error").html("Please Enter Valid Name")
                     isValid = false;
                 }
-
             }
 			
 			 if ($("#email").val() == "") {
+				 
                 $("#email").siblings(".error").html("Please Enter email ")                
                 isValid = false;
             }
@@ -227,18 +267,20 @@ $("#clickme").on("click",function(){
                     $("#email").siblings(".error").html("Please Enter Valid email")
                     isValid = false;
                 }
-			}
-			 if ($("#phone").val() == "") {
-                $("#phone").siblings(".error").html("Please Enter  phone number")                
+			} 
+			 if ($(".phone").val() == "") {
+				 
+                $(".p_error").html("Please Enter  phone number")  				
                 isValid = false;
+				
             }
-			else {
+			/*else {
 
-                if (!regphn.test($("#phone").val())) {
-                    $("#phone").siblings(".error").html("Please valid phone number")
+                if (!regphn.test($("phone").val())) {
+                    $(".p_error").html("Please enter number only")
                     isValid = false;
                 }
-			}
+			}*/
 			
 			 if ($("#message").val() == "") {
                 $("#message").siblings(".error").html("Please Enter  message")                
@@ -246,39 +288,17 @@ $("#clickme").on("click",function(){
             }
 		 return isValid;
 	}
-		
- /* let name = document.forms["myform"]["name"].value;
-  let email = document.forms["myform"]["email"].value;
-  let phone = document.forms["myform"]["phone"].value;
-  let message = document.forms["myform"]["message"].value;
-   
-   if (name == "") {
-    document.write("Name must be filled out");
-    return false;
-  }
-   if (email == "") {
-    alert("email must be filled out");
-    return false;
-  }
-   if (phone == "") {
-    alert("phone number must be filled out");
-    return false;
-  }
-   if (message == "") {
-    alert("message must be filled out");
-    return false;
-  }
-}
- */
+	
+	
       /*  function validateContactForm() {
             var valid = true;
 
             $(".info").php("");
             $(".input-field").css('border', '#e0dfdf 1px solid');
-            var userName = $("name").val();
-            var userEmail = $("email").val();
-            var phone = $("phone").val();
-            var message = $("message").val();
+            var userName = $("#userName").val();
+            var userEmail = $("#userEmail").val();
+            var subject = $("#subject").val();
+            var content = $("#content").val();
             
             if (userName == "") {
                 $("#userName-info").php("Required.");
@@ -297,12 +317,12 @@ $("#clickme").on("click",function(){
                 valid = false;
             }
 
-            if (phone == "") {
+            if (subject == "") {
                 $("#subject-info").php("Required.");
                 $("#subject").css('border', '#e66262 1px solid');
                 valid = false;
             }
-            if (message == "") {
+            if (content == "") {
                 $("#userMessage-info").php("Required.");
                 $("#content").css('border', '#e66262 1px solid');
                 valid = false;
@@ -312,6 +332,24 @@ $("#clickme").on("click",function(){
 </script>
 
 
+
+	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="http://localhost/infotech/assets/js/start.js" type="text/javascript"></script>
+	<script src="http://localhost/infotech/assets/js/jquery.min.js" />
+	<script src="http://localhost/infotech/assets/js/jquery.royalslider.min.js" />
+	
+ 
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script src="http://localhost/infotech/assets/js/general.js"></script>
+
+   <!---------  end------------>
+   
+   
    
    
    
@@ -337,12 +375,35 @@ function topFunction() {
 }
 </script>
    <script>
-		$(document).ready(function () {
+$(document).ready(function () {
    
 	$("#smenu").click(function(){
 	  $(".sm-menu").toggle();
 	});
+	
+	$(".hovermenu").hover(
+		function(){
+					$(".bgmenuhover").show();
+			});	
+	$(".innermenu").hover(
+		function(){
+					$(".bgmenuhover").show();
+			},
+			function(){
+					$(".bgmenuhover").hide();
+			}
+			);
 
+   $(".abc").hover(function(){
+		$(".bgmenuhover").hide();
+	}); 
+	 $(".navbar").hover(function(){
+		$(".bgmenuhover").hide();
+	});
+/*
+$(".contact-info").hover(function(){
+ $(".bgmenuhover").hide();
+});	  */
 
 const cards = document.querySelectorAll(".card");
 cards.forEach((c) => {

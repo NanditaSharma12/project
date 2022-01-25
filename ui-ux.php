@@ -2,7 +2,27 @@
 <html lang="en">
 
 <head>
-   
+    <title>UI/UX</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+	<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/fixes.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/responsive_col.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/responsive_col_sm.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/responsive_col_md.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/responsive_col_lg.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="icon" href="/assets/images/favicon.png" type="image/gif">
+    <link rel="stylesheet" href="/assets/css/carrousel.css" />
+    <!-- preview-related stylesheets -->
 
 </head>
 
@@ -28,7 +48,7 @@
 							<p><?php echo $service_data['description']; ?></p>
 						</div>
 						<div class="info-img" data-aos="fade-right" data-aos-duration="1500">
-							<img src="http://localhost/masters//assets/images/uiux/mobilephone.webp" alt="mobile img">
+							<img src="/assets/images/uiux/mobilephone.webp" alt="mobile img">
 						</div>
 					</div>
 				</div>
@@ -230,7 +250,18 @@
 	$("#smenu").click(function(){
 	  $(".sm-menu").toggle();
 	});
-
+	$(".hovermenu").hover(
+		function(){
+					$(".bgmenuhover").show();
+			});
+	$(".innermenu").hover(
+		function(){
+					$(".bgmenuhover").show();
+			},
+			function(){
+					$(".bgmenuhover").hide();
+			}
+			);
 
 const cards = document.querySelectorAll(".card");
 cards.forEach((c) => {

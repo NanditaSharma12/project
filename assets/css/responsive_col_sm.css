@@ -1,6 +1,7 @@
 /*media queries*/
 @media only screen and (min-width: 577px) and (max-width: 767px) {
-    .display-3 {
+   
+   .display-3 {
         font-size: 26px;
     }
     .btn_color_one {
@@ -825,7 +826,7 @@ section{overflow-x: auto;}
         background-position: bottom;
         height: auto;
     }
-    .dev-tech h3 {
+    .dev-tech h1 {
         margin: 0px !important;
         padding: 10px 0px 0px !important;
     }
@@ -910,7 +911,7 @@ section{overflow-x: auto;}
     .slider-left h3 {
         font-size: 57px;
     }
-    .slider-left h1 {
+    .slider-left h2 {
         font-size: 25px;
         word-break: break-word;
     }
@@ -956,9 +957,9 @@ section{overflow-x: auto;}
         padding: 10px 0px;
     }
     #portfolio {
-        display: block;
         align-items: center;
         justify-content: space-between;
+		flex-direction: column;
     }
     #portfolio .port-img {
         width: 100%;
@@ -981,22 +982,24 @@ section{overflow-x: auto;}
         font-size: 25px;
         font-weight: 700;
         line-height: 30px;
-        padding-top: 20px;
+        padding-top: 2px;
     }
-    .port-info p {
-        font-size: 15px;
-    }
+	.port-info p {
+		padding: 2px 0px;
+		color: #264360;
+		font-size: 15px;
+	}
     .p-section1 {
         padding: 38px 0px 0px;
     }
     #portfolio .port-img img {
-        width: 100%;
-        padding: 25px 0px;
-    }
+		width: 100%;
+		padding: 25px 0px 5px;
+	}
     .p-section2 {
-        background-image: url(../images/bg5.png);
-        padding: 30px 0px 0px;
-    }
+		background-image: none;
+		padding: 54px 0px 0px;
+	}
     .p-section3 {
         padding: 45px 0px 0px;
     }
@@ -1010,7 +1013,7 @@ section{overflow-x: auto;}
         width: 100%;
         padding: 0px 0%;
     }
-    .busi-info h3 {
+    .busi-info h2 {
         font-size: 22px;
     }
     .section1-bussiness-c img {
@@ -1031,7 +1034,7 @@ section{overflow-x: auto;}
     }
     .colm-reverse {
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column-reverse !important;
     }
     .center-text {
         padding: 5px;
@@ -1056,7 +1059,7 @@ section{overflow-x: auto;}
     .mobile-app-develop .mobi-img {
         width: 100%;
     }
-    .mobi-info h3 {
+    .mobi-info h2 {
         font-size: 22px;
     }
     .m-app-icons img {
@@ -1067,16 +1070,16 @@ section{overflow-x: auto;}
         box-shadow: 2px 4px 40px rgb(0 0 0 / 25%);
     }
     .section1-mobile {
-        padding: 85px 0px 0px !important;
+        padding: 65px 0px 0px !important;
     }
     .section2-mobile {
-        padding: 80px 0px 0px !important;
+        padding: 60px 0px 0px !important;
     }
     .section3-mobile {
-        padding: 80px 0px 0px !important;
+        padding: 60px 0px 0px !important;
     }
     .section4-mobile {
-        padding: 80px 0px 30px !important;
+        padding: 60px 0px 30px !important;
     } /* digital marketing */
     #digital-bg {
         background-image: none;
@@ -1089,7 +1092,7 @@ section{overflow-x: auto;}
         width: 100%;
         justify-content: center;
     }
-    .digital-info h3 {
+    .digital-info h2 {
         font-size: 16px;
         padding: 3px 0px;
     }
@@ -1122,7 +1125,7 @@ section{overflow-x: auto;}
         position: absolute;
         top: -40px;
     }
-    .digital-box h5 {
+    .digital-box h3 {
         font-size: 20px;
         padding: 10px;
         margin-top: 12%;

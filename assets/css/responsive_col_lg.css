@@ -1,5 +1,39 @@
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
+.baner-img .cards {
+    border-radius: 16px;
+    width: 100%;
+    height: 345px;
+    position: relative;
+    background-repeat: no-repeat;
+}
+.baner .baner-info {
+    width: 50%;
+    padding-bottom: 25px;
+    padding-right: 15px;
+}
+
+.services_inside h3{
+	font-size: 1.25rem;
+}
+.section3 .services_other .services_inside h2 {
+    font-size: 30px;
+    line-height: 46px !important;
+    letter-spacing: 0.6px;
+    padding-top: 15px;
+}
+/* 	.services_other ul {
+    display: block;
+} */
+	.services_other ul li:first-child {
+    width: 50%;
+}
+.services_other ul li:nth-child(2) {
+    width: 48%;
+}
+
+
+
 .thank_you {
     margin: 10% 0px 3%;
 }
@@ -165,13 +199,13 @@
 }
 .p-section1 {
     background-image: url(../images/web.png);
-    padding: 40px 0px 0px;
+    padding: 50px 0px 0px;
 }
 .p-section2 {
-    padding: 40px 0px 0px;
+    padding: 70px 0px 0px;
 }
 .p-section3 {
-    padding: 40px 0px 0px;
+    padding: 50px 0px 0px;
 }
 .port-info h2 {
     color: #F05454;
@@ -295,7 +329,7 @@
     width: 50%;
     padding: 15px 4% 0px;
 }
-.busi-info h3 {
+.busi-info h2 {
     font-size: 24px;
 }
 p {
@@ -312,7 +346,7 @@ p {
     height: 100%;
     object-fit: cover;
 }
-.mobi-info h3 {
+.mobi-info h2 {
     font-size: 24px;
 }
 .section1-mobile {
@@ -354,7 +388,7 @@ p {
     position: absolute;
     top: -70px;
 }
-.digital-box h5 {
+.digital-box h3 {
     font-size: 20px;
     padding: 10px 10px 0px;
     color: #F05454;
@@ -370,7 +404,7 @@ p {
     overflow: hidden;
     margin-left: 0%;
 }
-.digital-info h3 {
+.digital-info h2 {
     font-size: 18px;
     color: #30475E;
     font-weight: 600;
@@ -701,7 +735,26 @@ form.contact_form h3 {
 
 }
 @media only screen and (min-width: 1024px) and (max-width: 1200px) {
-	
+.baner-img .cards {
+    height: 438px;
+}
+.port-info h2 {
+    font-size: 30px;
+    line-height: 35px;
+}
+.services_other ul li:first-child {
+    width: 48%;
+}
+.services_other ul li:nth-child(2) {
+    width: 50%;
+}
+.section3 .services_other .services_inside h2 {
+    font-size: 38px;
+    line-height: 53px !important;
+    letter-spacing: 0.4px;
+	padding-top: 15px;
+}
+		
 .thank_you {
     margin: 5% 0px 3%;
 }
@@ -763,7 +816,7 @@ footer h2.fs-1 {
     width: 50%;
     padding: 20px 10px 0px;
 }
-.our-value-left h1 {
+.our-value-left h3 {
     font-size: 26px;
 }
 .aim-goal img {
@@ -779,8 +832,11 @@ footer h2.fs-1 {
 		border-radius: 30px;
 		margin-top: 30px;
 		margin-bottom: 20px;
-		min-height: 240px;
+		min-height: 100%;
 	} 
+	.section3 .services_other .services_inside p {
+    margin-bottom: 0.1rem;
+}
 	.swiper.details {
     width: 100%;
     height: calc(100vh - 200px);
@@ -823,7 +879,7 @@ footer h2.fs-1 {
     top: -44px;
     left: 10%;
 }
-.digital-box h5{
+.digital-box h3{
     font-size: 20px;
     padding: 9px;
     margin-top: 15%;
@@ -834,7 +890,7 @@ footer h2.fs-1 {
     padding: 8px 8px 15px;
     margin: 50px 25px 30px; 
 }
-.busi-info h3 {
+.busi-info h2 {
     font-size: 25px;
 }
 
@@ -849,6 +905,26 @@ footer h2.fs-1 {
 
 
 @media only screen and (min-width: 1200px) and (max-width: 1366px) {
+.port-info h2 {
+    font-size: 35px;
+    line-height: 45px;
+}	
+	.services_other ul li:first-child {
+    width: 54%;
+}
+.services_other ul li:nth-child(2) {
+    width: 44%;
+}
+.section3 .services_other .services_inside h2 {
+    font-size: 44px;
+    line-height: 56px !important;
+    letter-spacing: 0.6px;    padding-top: 15px;
+}
+.baner .baner-info {
+    width: 42%;
+    padding-right: 40px;
+}	
+	
 	ul.navbar-nav.ms-auto {
 		margin-right: 30px;
 	}
@@ -880,7 +956,7 @@ footer h2.fs-1 {
 	
 .portfolio_sec .wrapper {    transition: 0.25s;    border: none;    width: 47%;}
 .portfolio_sec .card {    height: 22rem;   }
-.busi-info h3 {
+.busi-info h2 {
     font-size: 30px;
 }
 .section6.page-section {
@@ -946,7 +1022,7 @@ footer h2.fs-1 {
     left: 10%;
 }
 
-.digital-box h5{
+.digital-box h3{
     font-size: 20px;
     padding: 9px;
     margin-top: 15%;
@@ -967,7 +1043,7 @@ footer h2.fs-1 {
 .pro-list {
     padding-left: 15px;
 }
-.our-value-left h1 {
+.our-value-left h3 {
     font-size: 28px;
 }
 .case-study-box .case_study:nth-of-type(1), .case-study-box .case_study:nth-of-type(6) {
@@ -1014,7 +1090,7 @@ footer {
 .our-value {
     margin-top: 21%;
 }
-.our-value-left h1 {
+.our-value-left h3 {
     text-align: right;
     padding-right: 30px;
     font-size: 30px;
@@ -1033,9 +1109,11 @@ footer {
     border-radius: 30px;
     margin-top: 30px;
     margin-bottom: 20px;
-    min-height: 178px;
+    min-height: 100%;
 }
-	
+.section3 .services_other .services_inside p {
+    margin-bottom: 0.1rem;
+}	
 	
 	
 	.swiper.details {
@@ -1078,10 +1156,17 @@ footer h2.fs-1 {
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1366px) {
+
+.services_inside h3{
+	font-size: 1.25rem;
+}
+
+
+
 .digital-bg {
     padding: 90px 0px 20px;
 }
-.digital-info h3 {
+.digital-info h2 {
     font-size: 19px;
     padding: 10px 0px 0px;
 }
@@ -1202,7 +1287,7 @@ section {
     width:100%
 }
 
-.mobi-info h3 {
+.mobi-info h2 {
     font-size: 25px;
     font-weight: 800;
     color: #f05454;
@@ -1307,14 +1392,12 @@ section {
 
 
 .section3.page-section {
-    padding: 50px 0;
-    background-image: url(../images/web3.png);
-   
+    padding: 50px 0; 
 }
 .ptb56 {
     padding: 15px 0px;
 }
-.slider-left h1 {
+.slider-left h2 {
     text-transform: uppercase;
     font-size: 35px;
     font-weight: 800;
@@ -1745,25 +1828,21 @@ p {
 }
 .p-section1 {
     background-image: url(../images/web.png);
-    padding: 50px 0px 0px;
+    padding: 60px 0px 0px;
     background-size: cover;
     background-position: bottom center;
     background-repeat: no-repeat;
 }
 .p-section2 {
     background-image: url(../images/bg5.png);
-    padding: 50px 0px 0px;
+    padding: 80px 0px 0px;
     background-size: cover;
 }
 .p-section3 {
     background-image: url(../images/web2.png);
-    padding: 50px 0px 0px;
+    padding: 60px 0px 0px;
 }
 
-.port-info h2 {
-    font-size: 35px;
-    line-height: 45px;
-}
 .port-info p {
     font-size: 15px;
 }
@@ -1904,8 +1983,17 @@ form.contact_form h3 {
 
 
 @media only screen and (min-width: 1367px) and (max-width: 1500px) {
-
-	
+.services_other ul li:first-child {
+    width: 56%;
+}
+.services_other ul li:nth-child(2) {
+    width: 42%;
+}
+.section3 .services_other .services_inside h2 {
+    font-size: 48px;
+    line-height: 62px !important;
+    letter-spacing: 1px;
+}
 	ul.navbar-nav a.nav-link {
 		padding: 7px 0px;
 		margin: 0px 15px;
@@ -1952,7 +2040,7 @@ form.contact_form {
 .baner .baner-info br {
     display: none;
 }
-.our-value-left h1 {
+.our-value-left h3 {
     text-align: right;
     padding-right: 30px;
     font-size: 35px;
@@ -1978,7 +2066,7 @@ form.contact_form {
 }
 .section3.page-section {
     padding: 30px 0 35px;
-    background-image: url(../images/web3.png);
+    /* background-image: url(../images/web3.png); */
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1987,8 +2075,8 @@ form.contact_form {
     font-size: 25px;
 }
 
-.p-section1, .p-section2, .p-section3{
-    padding: 35px 0px 10px;
+.p-section1, .p-section2, .p-section3 {
+    padding: 80px 0px 10px;
 }
 .benefits {
     width: 50%;
@@ -2080,7 +2168,7 @@ section.banner-slider-parent {
     background-image: url(assets/images/web2.png);
     padding: 20px 0px;
 }
-.mobi-info h3 {
+.mobi-info h2 {
     font-size: 38px;
     padding-bottom: 12px;
     line-height: 44px;
@@ -2132,7 +2220,7 @@ section.banner-slider-parent {
     position: absolute;
     top: -55px;
 }
-.digital-box h5 {
+.digital-box h3 {
     font-size: 22px;
     padding: 10px;
 }
@@ -2143,7 +2231,7 @@ section.banner-slider-parent {
 #digital-bg {
     padding: 30px 0px;
 }
-.busi-info h3 {
+.busi-info h2 {
     font-size: 38px;
     font-weight: 800;
     color: #f05454;
@@ -2184,9 +2272,12 @@ section.banner-slider-parent {
 
 }
 
+@media only screen and (max-width: 1440px) and (min-width: 1024px) {
+.navbar-brand {
+    width: 30%;
+}   
 
-
-
+}
 
 @media only screen and (min-width: 1024px) and (max-width: 1366px) {
 .tech-stack {

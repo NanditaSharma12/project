@@ -29,4 +29,6 @@
        $stmt8 = $conn->prepare("SELECT * FROM portfolio order by id asc limit 4");
        $stmt8->execute(); 
        $portfolio = $stmt8->fetchAll();
-      ?>
+      
+	 
+?>

@@ -27,6 +27,21 @@ $message = "";
                     $user = $stmt->fetch();
                     $_SESSION["name"] = $user["name"];  
                     $_SESSION["email"] = $user["email"];  
+					$_SESSION["user_id"] = $user["id"]; 
+				if($_SERVER['REMOTE_ADDR'] == '115.242.237.62'):
+					$login = time();
+					$uip=$_SERVER['REMOTE_ADDR'];
+					$date = date('d-m-Y'); 
+					$data = [
+					'userid' => $user["id"],
+					'login' => $login,
+					'uip' => $uip,
+					'date' => $date
+
+						];
+				$sql = "INSERT INTO attendance (`user_id`,`login`,`ip_address`,`date`) VALUES (:userid,:login,:uip,:date)";
+				$conn->prepare($sql)->execute($data);
+				endif;
                     header("location:index.php");  
                 }  
                 else  

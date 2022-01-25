@@ -66,9 +66,8 @@
 
             $title = $_POST['title'];
             $slug = $_POST['slug'];
-
-            $description = $_POST['description'];
-			 $meta_desc = $_POST['meta_desc'];
+		  	 $description = htmlspecialchars($_POST['description']);
+		  	 $meta_desc = base64_encode($_POST['meta_desc']);
 		  	 $meta_title = $_POST['meta_title'];
 
             if(!empty($imagex))    {
@@ -109,9 +108,6 @@
 
 							];
 
-						   
-//  echo $sql = "UPDATE blogs_data SET  cat=$cat,add_date=$add_date,slug=$slug,added_by=$added_by,title=$title,image=$image,description=$description,meta_desc=$meta_desc,meta_title=$meta_title WHERE id=$id";
-// 	die;
 					   $sql = "UPDATE blogs_data SET  cat=:cat,add_date=:add_date,slug=:slug,added_by=:added_by,title=:title,image=:image,description=:description,meta_desc=:meta_desc,meta_title=:meta_title WHERE id=:id";
 
 					   $conn->prepare($sql)->execute($data);
@@ -138,8 +134,6 @@
 
 							];
 
-// 						   echo $sql = "UPDATE blogs_data SET  cat=$cat,add_date=$add_date,slug=$slug,added_by=$added_by,title=$title,image=$image,description=$description,meta_desc=$meta_desc,meta_title=$meta_title WHERE id=$id";
-// 	die;
 
 					   $sql = "UPDATE blogs_data SET  cat=:cat,add_date=:add_date,slug=:slug,added_by=:added_by,title=:title,description=:description,meta_desc=:meta_desc,meta_title=:meta_title WHERE id=:id";
 
@@ -200,37 +194,31 @@
 		  	 $added_by = $_POST['added_by'];
 
 		  	 $title = $_POST['title'];
-
-		  	 $description = $_POST['description'];
-		  	 $meta_desc = $_POST['meta_desc'];
+$slug = $_POST['slug'];
+		  	 $description = htmlspecialchars($_POST['description']);
+		  	 $meta_desc = base64_encode($_POST['meta_desc']);
 		  	 $meta_title = $_POST['meta_title'];
 
-		  	 
+				// $data = [
 
-				$data = [
+					// 'cat' => $cat,
 
-					'cat' => $cat,
+					// 'add_date' => $add_date,
 
-					'add_date' => $add_date,
+					// 'added_by' => $added_by,
 
-					'added_by' => $added_by,
+					// 'title' => $title,
 
-					'title' => $title,
+					// 'image' => $image1,
+                    // 'slug'=>$slug,
+					// 'description' => $description,
+					// 'meta_desc' => $meta_desc,
+					// 'meta_title' => $meta_title,
+						// ];
 
-					'image' => $image1,
-                    'slug'=>$slug,
-					'description' => $description,
-'meta_desc' => $meta_desc,
-'meta_title' => $meta_title,
-						];
+		$sql = "INSERT INTO blogs_data (cat,add_date,added_by,title,image,slug,description,meta_desc,meta_title) VALUES ('$cat','$add_date','$added_by','$title','$image1','$slug','$description','$meta_desc','$meta_title')";
 
-                       
-
-						
-
-		$sql = "INSERT INTO blogs_data (cat,add_date,added_by,title,slug,image,description,meta_desc,meta_title) VALUES (:cat,:add_date,:added_by,:title,:slug,:image,:description,:meta_desc,:meta_title)";
-
-	$conn->prepare($sql)->execute($data);
+	 $conn->prepare($sql)->execute();
 
 		}
 
@@ -395,7 +383,7 @@ $role_id = $datasidebar['role_id'];
 
                   
 
-                  <li class="breadcrumb-item active"><a href="https://masterinfotech.com/admin/add-choose-best.php">Add Blogs</a>
+                  <li class="breadcrumb-item active"><a href="https://masterinfotech.com/admin/add-blogs.php">Add Blogs</a>
 
                   </li>
 
@@ -471,7 +459,7 @@ $role_id = $datasidebar['role_id'];
 
                                             <?php   foreach ($data as $row) { ?>
 
-			                                <option value="<?php echo $row['id']; ?>" <?php if($service['id'] == $row['id']){ echo'selected'; }else{} ?> ><?php echo $row['cat']; ?></option>
+			                                <option value="<?php echo $row['id']; ?>" <?php if($service['cat'] == $row['id']){ echo'selected'; }else{} ?> ><?php echo $row['cat']; ?></option>
 
                                             <?php } ?>
 
@@ -546,7 +534,7 @@ $role_id = $datasidebar['role_id'];
 
                                     <textarea name="meta_desc"  cols="50" rows="3" class="form-control round">
 
-								<?php echo $service['meta_desc']; ?>
+								<?php echo base64_decode($service['meta_desc']); ?>
 
 							        </textarea>
 

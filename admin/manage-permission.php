@@ -46,7 +46,7 @@ if(isset($_GET['id'])){
 
   $stmt->execute([$id]); 
 
-  header('location:https://masterinfotech.com/admin/manage-permission.php');
+  header('location:http://localhost/infotech/admin/manage-permission.php');
 
 }
 
@@ -181,11 +181,11 @@ $role_id = $datasidebar['role_id'];
 
                 <ol class="breadcrumb">
 
-                  <li class="breadcrumb-item"><a href="https://masterinfotech.com/admin/index.php">Home</a>
+                  <li class="breadcrumb-item"><a href="http://localhost/infotech/admin/index.php">Home</a>
 
                   </li>
 
-                  <li class="breadcrumb-item"><a href="https://masterinfotech.com/admin/add-permission.php">Add permission</a>
+                  <li class="breadcrumb-item"><a href="http://localhost/infotech/admin/add-permission.php">Add permission</a>
 
                   </li>
 
@@ -275,7 +275,7 @@ $role_id = $datasidebar['role_id'];
                                         <td><?php echo $data1['name']; ?></td>
                                         <td><?php echo implode(',',$nm); ?></td>
 
-                                        <td><a href="add-permission.php?id=<?php echo $row['id']; ?>">Edit<a>  / <a href="manage-permission.php?id=<?php echo $row['id']; ?>">Delete<a>  </td>
+                                        <td><a href="http://localhost/infotech/admin/add-permission.php?id=<?php echo $row['id']; ?>">Edit<a>  / <a href="http://localhost/infotech/admin/manage-permission.php?id=<?php echo $row['id']; ?>">Delete<a>  </td>
 
                                         
 

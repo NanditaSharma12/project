@@ -35,7 +35,7 @@
 	include('../inc/connection.php');
 
 	$conn = DB(); 
-
+ $conn1 = DB(); 
 	$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
 
     if(isset($_POST['update'])){
@@ -329,7 +329,9 @@ $role_id = $datasidebar['role_id'];
 
 
 
-	<?php include('sidebar.php'); ?>
+	<?php include('sidebar.php');
+
+	?>
 
 
 

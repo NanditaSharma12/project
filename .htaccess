@@ -1,11 +1,9 @@
-RewriteEngine On
-
 
 
 RewriteRule career-details/job/(.*)/ career-details.php?job=$1
 RewriteRule career-details/job/(.*) career-details.php?job=$1
-RewriteRule blog/(.*)/ blog-details.php?title=$1
-RewriteRule blog/(.*) blog-details.php?title=$1
+# RewriteRule blog/(.*)/ blog-details.php?title=$1
+# RewriteRule blog/(.*) blog-details.php?title=$1
 
 RewriteRule category/cat/(.*)/ category.php?cat=$1
 RewriteRule category/cat/(.*) category.php?cat=$1
@@ -46,20 +44,22 @@ RewriteRule month/date/(.*) month.php?date=$1
 
 
 RewriteRule ^who-we-are$ /who-we-are.php [L]
-RewriteRule ^portfolio$ /portfolio.php [L]
+RewriteRule ^our-portfolio$ /portfolio.php [L]
 RewriteRule ^career$ /career.php [L]
 RewriteRule ^blog$ /blog.php [L]
 RewriteRule ^contact-us$ /contact-us.php [L]
 RewriteRule ^home$ /index.php [L]
 RewriteRule ^category$ /category.php [L]
-RewriteRule ^web-d$ /web-d.php [L]
-RewriteRule ^training$ /training.php [L]
-RewriteRule ^bussiness_consultation$ /bussiness_consultation.php [L]
-RewriteRule ^digital-marketing$ /digital-marketing.php [L]
-RewriteRule ^e-commerce$ /e-commerce.php [L]
-RewriteRule ^ui-ux$ /ui-ux.php [L]
-RewriteRule ^mobile_app_development$ /mobile_app_development.php [L]
+RewriteRule ^website-development-services$ /web-d.php [L]
+RewriteRule ^training-and-internship$ /training.php [L]
+RewriteRule ^bussiness-consultation-services$ /bussiness_consultation.php [L]
+RewriteRule ^digital-marketing-services$ /digital-marketing.php [L]
+RewriteRule ^e-commerce-services$ /e-commerce.php [L]
+RewriteRule ^ui-and-ux-services$ /ui-ux.php [L]
+RewriteRule ^mobile-app-development-services$ /mobile_app_development.php [L]
 RewriteRule ^case-study$ /case-study.php [L]
 RewriteRule ^case-study2$ /case-study2.php [L]
 RewriteRule ^career-details$ /career-details.php [L]
-RewriteRule ^services$ /services.php [L]
+RewriteRule ^our-services$ /services.php [L]
+RewriteRule ^mail$ /mail.php [L]
+

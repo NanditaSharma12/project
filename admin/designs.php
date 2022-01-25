@@ -278,7 +278,146 @@ $role_id = $datasidebar['role_id'];
 <!-- // Basic form layout section end -->
 
         </div>
+<div class="content-body"><!-- Description -->
+<section id="description" class="card">
+    <div class="card-header">
+      <h4 class="card-title">Description</h4>
+      <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+        <div class="heading-elements">
+            <ul class="list-inline mb-0">
+                <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                <li><a data-action="close"><i class="ft-x"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="card-content">
+      <div class="card-body">
+          <div class="card-text">
+              <p>Image gallery grid with photo-swipe integration. Display images in 4-2-1 columns and photo-swipe provides gallery features.</p>
+              <p>Please read the photo-swipe gallery <a href="http://photoswipe.com/documentation/getting-started.html" target="_blank">documentation</a> for usage information.</p>
+          </div>
+      </div>
+    </div>
+</section>
+<!--/ Description -->
 
+<!-- Image grid -->
+<section id="image-gallery" class="card">
+  <div class="card-header">
+    <h4 class="card-title">Image gallery</h4>
+    <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+        <div class="heading-elements">
+          <ul class="list-inline mb-0">
+              <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+              <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+              <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+              <li><a data-action="close"><i class="ft-x"></i></a></li>
+          </ul>
+      </div>
+  </div>
+  <div class="card-content collapse show">
+      <div class="card-body">
+          <div class="card-text">
+            <p>Image gallery grid with photo-swipe integration. Display images gallery in 4-2-1 columns and photo-swipe provides gallery features.</p>
+          </div>
+      </div>
+    <div class="card-body  my-gallery" itemscope="" itemtype="http://schema.org/ImageGallery" data-pswp-uid="1">
+	<?php
+								$i=1;
+								 $cc = $xdata['countrec'];
+								echo' <div class="row">';
+							  foreach ($data as $row) { 
+							  ?> 
+									<figure class="col-lg-3 col-md-6 col-sm-6 col-xs-12" itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject">
+          <a href="<?php echo $row['image'];?>" itemprop="contentUrl" data-size="480x360">
+              <img class="img-thumbnail img-fluid" src="<?php echo $row['image'];?>" itemprop="thumbnail" alt="Image description">
+          </a>
+		  
+									    <!--p><b>Image URL: </b><?php //echo $name = "https://masterinfotech.com/".$row['image']; ?></p-->
+										<button class="btn btn-primary" onclick="deletedata(<?php echo $row['id']; ?>)">Delete</button></td>
+        </figure>
+									<?php if ($i == 4) {
+											echo "</div>";
+												}
+										 $i++;
+										}
+									
+								
+									?>
+   </div>
+    <!--/ Image grid -->
+
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+        <!-- Background of PhotoSwipe. 
+             It's a separate element as animating opacity is faster than rgba(). -->
+        <div class="pswp__bg"></div>
+
+        <!-- Slides wrapper with overflow:hidden. -->
+        <div class="pswp__scroll-wrap">
+
+            <!-- Container that holds slides. 
+                PhotoSwipe keeps only 3 of them in the DOM to save memory.
+                Don't modify these 3 pswp__item elements, data is added later on. -->
+            <div class="pswp__container" style="transform: translate3d(0px, 0px, 0px);">
+                <div class="pswp__item" style="display: block; transform: translate3d(-2131px, 0px, 0px);"><div class="pswp__zoom-wrap" style="transform: translate3d(712px, 305px, 0px) scale(0.408627);"><img class="pswp__img" src="../../../app-assets/images/gallery/4.jpg" style="opacity: 1; width: 1175px; height: 881px;"></div></div>
+                <div class="pswp__item" style="transform: translate3d(0px, 0px, 0px);"><div class="pswp__zoom-wrap" style="transform: translate3d(311.797px, 291.031px, 0px) scale(0.308465);"><img class="pswp__img pswp__img--placeholder" src="../../../app-assets/images/gallery/1.jpg" style="width: 1175px; height: 881px; display: none;"><img class="pswp__img" src="../../../app-assets/images/gallery/1.jpg" style="display: block; width: 1175px; height: 881px;"></div></div>
+                <div class="pswp__item" style="display: block; transform: translate3d(2131px, 0px, 0px);"><div class="pswp__zoom-wrap" style="transform: translate3d(712px, 305px, 0px) scale(0.408627);"><img class="pswp__img" src="../../../app-assets/images/gallery/2.jpg" style="opacity: 1; width: 1175px; height: 881px;"></div></div>
+            </div>
+
+            <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+            <div class="pswp__ui pswp__ui--fit pswp__ui--hidden">
+
+                <div class="pswp__top-bar">
+
+                    <!--  Controls are self-explanatory. Order can be changed. -->
+
+                    <div class="pswp__counter">1 / 4</div>
+
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                    <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                    <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                    <!-- element will get class pswp__preloader-active when preloader is running -->
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                          <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div> 
+                </div>
+
+                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                </button>
+
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                </button>
+
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+  </div>
+  <!--/ PhotoSwipe -->
+</section>
+<!--/ Image grid -->
+
+        </div>
       </div>
 
     </div>
